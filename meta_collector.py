@@ -1,6 +1,9 @@
+import sys
 import json
 import requests
 from bs4 import BeautifulSoup
+
+URL = sys.argv[1]
 
 def getMetaTags(URL):
     # data request info
@@ -19,4 +22,4 @@ def getMetaTags(URL):
     return toJson
 
 # example
-# print(getMetaTags("https://enttry.com.br/contato"))
+print(getMetaTags(URL))
